@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Welcome
+  p #{data.no_of_urls} URLs being monitored for their response times
+  ul List of URLs
+    each url in data.urls
+      li
+        a(href=url.id) #{url.url}
+
+  p See&nbsp
+    a(href="https://github.com/orkohunter/monitor-urls") README
+    &nbspto add, edit or remove urls from the database.
